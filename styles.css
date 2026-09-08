@@ -1,0 +1,122 @@
+:root {
+  --bg: #f8f9fb;
+  --surface: #ffffff;
+  --text: #1f2933;
+  --muted: #52606d;
+  --line: #d9e2ec;
+  --accent: #274c77;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", "Noto Sans JP", "Segoe UI", sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  width: min(100% - 2rem, 960px);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name {
+  margin: 0;
+  padding-top: 1rem;
+  font-weight: 700;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+a {
+  color: var(--accent);
+}
+
+.hero {
+  background: var(--surface);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.35;
+}
+
+h1 {
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+}
+
+.section {
+  padding: 2.5rem 0;
+}
+
+.section-alt {
+  background: #f2f5f8;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+article + article {
+  margin-top: 1.5rem;
+}
+
+.site-footer {
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 2.2rem 0;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+}
