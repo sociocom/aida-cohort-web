@@ -547,9 +547,9 @@ dd {
 
 .intro-lead {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
   align-items: end;
-  gap: clamp(1.75rem, 3vw, 3rem);
+  gap: clamp(1.25rem, 2.25vw, 2rem);
   padding-bottom: clamp(2rem, 3vw, 3rem);
   border-bottom: 1px solid var(--color-border);
 }
@@ -568,6 +568,7 @@ dd {
   white-space: nowrap;
 }
 
+.intro-key-human-ai,
 .intro-key-now,
 .intro-key-future {
   position: relative;
@@ -580,6 +581,7 @@ dd {
   line-height: 1.25;
 }
 
+.intro-key-human-ai::after,
 .intro-key-now::after {
   position: absolute;
   z-index: -1;
@@ -711,6 +713,10 @@ dd {
 
 .intro-aida-block p {
   margin: 0;
+}
+
+.intro-aida-block > p:last-child {
+  align-self: center;
 }
 
 .intro-aida-lead {
