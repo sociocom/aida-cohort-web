@@ -1255,15 +1255,23 @@ dd {
   font-size: 0.9375rem;
 }
 
-.institution-more {
-  display: grid;
-  min-height: 150px;
-  place-items: center;
+.institution-placeholder {
   border-style: dashed;
-  background: var(--color-page);
+  background: #f9fcfb;
+  box-shadow: none;
+}
+
+.institution-placeholder-label {
+  width: fit-content;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--color-primary-soft);
   color: var(--color-muted);
-  font-size: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
   font-weight: 750;
+  letter-spacing: 0.035em;
 }
 
 /* Future content components: only rendered after verified data is added */
