@@ -534,7 +534,8 @@ dd {
 
 /* Introduction */
 .intro-section {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+  padding-block: clamp(4rem, 6vw, 5.5rem);
   background:
     radial-gradient(circle at 88% 6%, rgba(28, 178, 153, 0.08), transparent 25rem),
     #ffffff;
@@ -548,18 +549,18 @@ dd {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   align-items: end;
-  gap: clamp(2.5rem, 5vw, 4.5rem);
-  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  gap: clamp(1.75rem, 3vw, 3rem);
+  padding-bottom: clamp(2rem, 3vw, 3rem);
   border-bottom: 1px solid var(--color-border);
 }
 
 .intro-content h2 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
   font-weight: 600;
   letter-spacing: -0.045em;
-  line-height: 1.34;
+  line-height: 1.28;
 }
 
 .intro-heading-line {
@@ -615,11 +616,11 @@ dd {
 
 .intro-scene {
   margin: 0;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   border-top: 3px solid var(--color-primary);
   color: var(--color-muted);
   font-size: 1.125rem;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .intro-scene span {
@@ -627,34 +628,38 @@ dd {
 }
 
 .intro-scene span + span {
-  margin-top: 0.75rem;
+  margin-top: 0.4rem;
 }
 
 .intro-story {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 3.25vw, 3rem) clamp(1.75rem, 3vw, 2.75rem);
   max-width: 890px;
-  margin-top: clamp(3.5rem, 7vw, 6rem);
+  margin-top: clamp(2.25rem, 3.5vw, 3.25rem);
 }
 
 .intro-question {
+  grid-column: 1 / -1;
   max-width: 770px;
-  margin-left: clamp(0rem, 5vw, 4rem);
-  padding: 0.2rem 0 0.35rem clamp(1.25rem, 3vw, 2.25rem);
+  margin-left: clamp(0rem, 2.5vw, 2rem);
+  padding: 0.1rem 0 0.2rem clamp(1.1rem, 2vw, 1.6rem);
   border-left: 4px solid var(--color-primary);
 }
 
 .intro-turn {
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
   color: var(--color-ink);
   font-family: var(--font-serif);
   font-size: clamp(1.35rem, 2.2vw, 1.7rem);
   font-weight: 650;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .intro-question-copy {
   margin: 0;
   font-size: 1.1875rem;
-  line-height: 2.05;
+  line-height: 1.82;
 }
 
 .intro-time-destination {
@@ -696,10 +701,11 @@ dd {
 
 .intro-aida-block {
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
-  gap: clamp(2rem, 5vw, 4.5rem);
-  margin-top: clamp(4rem, 7vw, 6rem);
-  padding-block: clamp(2rem, 4vw, 3rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: 0;
+  padding-block: clamp(1.35rem, 2.5vw, 2rem);
   border-block: 1px solid var(--color-border);
 }
 
@@ -711,7 +717,7 @@ dd {
   color: var(--color-ink);
   font-size: clamp(1.2rem, 2vw, 1.45rem);
   font-weight: 650;
-  line-height: 1.85;
+  line-height: 1.72;
 }
 
 .intro-aida-term {
@@ -733,15 +739,16 @@ dd {
 
 .intro-possibilities {
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: 1fr;
-  margin-top: clamp(3.5rem, 6vw, 5rem);
+  margin-top: 0;
   border-block: 1px solid var(--color-border);
   text-align: center;
 }
 
 .intro-possibilities p {
   margin: 0;
-  padding: 1.65rem 0;
+  padding: 0.9rem 0;
   color: var(--color-ink);
   font-size: 1.125rem;
   font-weight: 700;
@@ -753,32 +760,34 @@ dd {
 }
 
 .intro-investigation {
+  grid-column: 1 / -1;
   max-width: 730px;
-  margin: 2.5rem auto 0;
+  margin: 0 auto;
   color: var(--color-ink);
   font-size: 1.1875rem;
   font-weight: 650;
-  line-height: 1.95;
+  line-height: 1.78;
   text-align: center;
   text-wrap: balance;
 }
 
 .intro-horizon {
-  margin-top: clamp(4rem, 7vw, 6rem);
-  padding: clamp(1.75rem, 4vw, 2.6rem) clamp(1.5rem, 4vw, 2.75rem);
+  grid-column: 1 / -1;
+  margin-top: 0;
+  padding: clamp(1.3rem, 2.5vw, 1.9rem) clamp(1.25rem, 3vw, 2rem);
   border-left: 4px solid var(--color-primary);
   background: linear-gradient(90deg, var(--color-primary-pale), rgba(241, 251, 248, 0.22));
 }
 
 .intro-horizon p {
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.7rem;
 }
 
 .intro-horizon p:last-child {
   margin-bottom: 0;
   color: var(--color-text);
   font-size: 1.125rem;
-  line-height: 2;
+  line-height: 1.78;
 }
 
 .intro-core-message {
@@ -793,9 +802,12 @@ dd {
 
 .intro-mission {
   display: grid;
+  grid-column: 1;
+  align-self: center;
   max-width: 720px;
-  gap: 0.4rem;
-  margin: clamp(3.5rem, 6vw, 5rem) auto;
+  gap: 0.25rem;
+  margin: 0 auto;
+  padding-inline: 0.5rem;
   text-align: center;
 }
 
@@ -812,20 +824,22 @@ dd {
 }
 
 .intro-closing {
+  grid-column: 2;
+  align-self: center;
   margin: 0;
-  padding: clamp(1.7rem, 4vw, 2.6rem) clamp(1.5rem, 4vw, 2.75rem);
+  padding: clamp(1.3rem, 2.5vw, 1.8rem) clamp(1.25rem, 2.5vw, 1.75rem);
   border-left: 5px solid var(--color-primary);
   background: linear-gradient(100deg, var(--color-primary-soft), rgba(241, 251, 248, 0.45));
   color: var(--color-text);
-  font-size: clamp(1.125rem, 1.8vw, 1.35rem);
-  line-height: 1.9;
+  font-size: clamp(1.0625rem, 1.5vw, 1.22rem);
+  line-height: 1.72;
 }
 
 .intro-closing-name {
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.35rem;
   color: var(--color-ink);
-  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
   font-weight: 850;
   letter-spacing: -0.025em;
   line-height: 1.35;
@@ -1390,11 +1404,26 @@ dd {
 
   .intro-lead {
     grid-template-columns: 1fr;
-    gap: 2.75rem;
+    gap: 2rem;
   }
 
   .intro-scene {
     max-width: 700px;
+  }
+
+  .intro-story {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.25rem;
+  }
+
+  .intro-question,
+  .intro-aida-block,
+  .intro-possibilities,
+  .intro-investigation,
+  .intro-horizon,
+  .intro-mission,
+  .intro-closing {
+    grid-column: 1;
   }
 
   .survey-list {
@@ -1520,7 +1549,8 @@ dd {
   }
 
   .intro-section {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
+    padding-block: 3.5rem;
   }
 
   .section-content > h2 {
@@ -1540,27 +1570,29 @@ dd {
   }
 
   .intro-content h2 {
-    font-size: clamp(1.85rem, 9vw, 2.6rem);
+    font-size: clamp(1.8rem, 8vw, 2.3rem);
+    line-height: 1.3;
   }
 
   .intro-lead {
-    gap: 2.25rem;
-    padding-bottom: 2.75rem;
+    gap: 1.5rem;
+    padding-bottom: 1.75rem;
   }
 
   .intro-scene {
-    padding-top: 1.15rem;
+    padding-top: 0.85rem;
     font-size: 1.0625rem;
-    line-height: 1.95;
+    line-height: 1.8;
   }
 
   .intro-story {
-    margin-top: 3.25rem;
+    gap: 1.9rem;
+    margin-top: 2rem;
   }
 
   .intro-question {
     margin-left: 0;
-    padding-left: 1.25rem;
+    padding-left: 1rem;
   }
 
   .intro-turn {
@@ -1579,9 +1611,9 @@ dd {
 
   .intro-aida-block {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 3.75rem;
-    padding-block: 2rem;
+    gap: 1.2rem;
+    margin-top: 0;
+    padding-block: 1.3rem;
   }
 
   .intro-aida-lead {
@@ -1590,12 +1622,12 @@ dd {
 
   .intro-possibilities {
     grid-template-columns: 1fr;
-    margin-top: 3.25rem;
+    margin-top: 0;
   }
 
   .intro-possibilities p,
   .intro-possibilities p:first-child {
-    padding: 1.35rem 0;
+    padding: 0.85rem 0;
     font-size: 1.0625rem;
   }
 
@@ -1605,20 +1637,22 @@ dd {
   }
 
   .intro-investigation {
-    margin-top: 2.25rem;
+    margin: 0 auto;
   }
 
   .intro-horizon {
-    margin-top: 3.75rem;
-    padding: 1.6rem 1.25rem;
+    margin-top: 0;
+    padding: 1.2rem 1.05rem;
   }
 
   .intro-horizon p:last-child {
     font-size: 1.0625rem;
+    line-height: 1.78;
   }
 
   .intro-mission {
-    margin-block: 3.5rem;
+    margin: 0 auto;
+    padding-inline: 0;
     text-align: left;
   }
 
@@ -1627,12 +1661,13 @@ dd {
   }
 
   .intro-closing {
-    padding: 1.6rem 1.25rem;
+    padding: 1.2rem 1.05rem;
     font-size: 1.0625rem;
+    line-height: 1.72;
   }
 
   .intro-closing-name {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
   .question-list {
