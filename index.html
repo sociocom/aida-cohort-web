@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#1CB299" />
     <title>AIDA（あいだ）コホート</title>
     <meta name="description" content="人とAIの「あいだ」を見つめるAIDA（あいだ）コホートの長期追跡研究ページ" />
     <link rel="stylesheet" href="./styles.css" />
@@ -11,237 +11,359 @@
   <body>
     <a class="skip-link" href="#main">本文へ移動</a>
 
-    <header class="page-header" id="top">
-      <div class="container header-bar">
-        <a class="brand" href="#top" aria-label="AIDAコホート トップ">
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="site-brand" href="#top" aria-label="AIDAコホート トップ">
           <span class="brand-mark" aria-hidden="true">A</span>
-          <span>AIDA <small>COHORT</small></span>
+          <span class="brand-copy">
+            <strong lang="en">AIDA <small>COHORT</small></strong>
+          </span>
         </a>
-        <p class="study-label">何かのリンクなど</p>
-      </div>
 
-      <div class="container hero">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span>Human × AI × Well-being</p>
-          <h1>人とAIの<br /><em>「あいだ」</em>を見つめる</h1>
-          <p class="hero-name">AIDA（あいだ）コホート</p>
-          <p class="hero-description">AIとの関わり方と，幸福や健康，孤独，生き方の変化を長い時間をかけて観察する研究です．</p>
-        </div>
-        <div class="hero-diagram" aria-hidden="true">
-          <span class="diagram-label label-human">Human</span>
-          <span class="diagram-label label-ai">AI</span>
-          <span class="diagram-label label-wellbeing">Well-being</span>
-          <div class="diagram-ring ring-one"></div>
-          <div class="diagram-ring ring-two"></div>
-          <div class="diagram-core">AIDA</div>
-        </div>
+        <nav class="primary-nav" aria-label="ページ内ナビゲーション">
+          <ul class="nav-list">
+            <li><a href="#about">研究概要</a></li>
+            <li><a href="#questions">調べること</a></li>
+            <li><a href="#why-now">今，調査する理由</a></li>
+            <li><a href="#method">調査方法</a></li>
+            <li><a href="#survey">調査項目</a></li>
+            <li><a href="#team">運営</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <nav class="section-nav" aria-label="ページ内ナビゲーション">
-      <div class="container nav-scroll">
-        <a href="#about">研究概要</a>
-        <a href="#findings">調べること</a>
-        <a href="#why-now">今，調査する理由</a>
-        <a href="#scale">調査方法</a>
-        <a href="#items">調査項目</a>
-        <a href="#committee">運営</a>
-      </div>
-    </nav>
+    <main id="main">
+      <section class="home-hero" aria-labelledby="hero-title">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <p class="hero-concept" lang="en">
+              <span>Human</span><b>×</b><span>AI</span><b>×</b><span>Well-being</span>
+            </p>
+            <h1 id="hero-title">人とAIの<br /><em>「あいだ」</em>を<wbr />見つめる</h1>
+            <p class="hero-name">AIDA（あいだ）コホート</p>
+            <p class="hero-description">AIとの関わり方と，幸福や健康，孤独，生き方の変化を長い時間をかけて観察する研究です．</p>
+          </div>
 
-    <main id="main" class="container main-content">
-      <section class="intro" aria-labelledby="intro-title">
-        <p class="section-code" aria-hidden="true">00 / INTRODUCTION</p>
-        <div class="intro-body">
-          <h2 id="intro-title" class="visually-hidden">はじめに</h2>
-          <p class="intro-opening">AIと話すことが，日常になりつつあります．</p>
-          <p>質問をする．相談をする．励まされる．ときには，友人のように感じることもあるかもしれません．</p>
-          <p>けれど，私たちはまだ知りません．こうした関係が，人の幸福や孤独，生き方に，どのような影響を与えるのかを．</p>
-          <p>そこで始まるのが，人とAIの「あいだ」を見つめる長期追跡研究です．共通した特徴を持つ人たちに協力していただき，長い時間をかけて，AIとの関わり方と心の変化を観察します．</p>
-          <p>AIと親しくなる人もいるでしょう．道具として使い続ける人もいるでしょう．その違いが，幸福感や人生の満足感とどのようにつながるのかを調べます．</p>
-          <p>いまはまだ小さな変化に見えるかもしれません．けれど振り返ったとき，この時代は，人とAIが初めて本格的に出会った時代だったと言われるでしょう．その最初の瞬間を記録すること．それがこの研究の役目です．</p>
-        </div>
-      </section>
-
-      <section id="about" class="content-section" aria-labelledby="about-title">
-        <header class="section-heading">
-          <p class="section-code">01 / ABOUT</p>
-          <h2 id="about-title">AIDAコホートとは</h2>
-        </header>
-        <div class="section-body prose">
-          <p>AIDAコホートとは，人間とAIの間の「関係性」を長期にわたり追跡する大規模コホート研究(*1)です．</p>
-          <p>ChatGPTなどのAIと人間との長期間にわたる「関係性」を観察するために，<strong class="key-number">1,000人</strong>の参加者を対象とした長期追跡観察研究（コホート）を立ち上げます．</p>
-          <p>このコホートでは，具体的には，AIの利用パターン（例：利用者がAIと親密な関係を築くかどうか）と，幸福感（主観的ウェルビーイング，協調的幸福感，人生満足度など）との関係を調査します．</p>
-          <p class="footnote"><span>*1</span> コホートとは，共通の特性を持つ集団を一定期間追跡し，変化や様々な要因との関係性を観察する研究枠組みです．</p>
-        </div>
-      </section>
-
-      <section id="findings" class="content-section" aria-labelledby="findings-title">
-        <header class="section-heading">
-          <p class="section-code">02 / QUESTIONS</p>
-          <h2 id="findings-title">AIDAコホートが調べること</h2>
-        </header>
-        <div class="question-grid">
-          <article class="question-card primary-card">
-            <span class="card-number">Q1</span>
-            <h3>AIを使って人間が幸福になるか？</h3>
-            <ul>
-              <li>どのように使うと幸福になる？</li>
-              <li>何に使うと幸福になる？</li>
-            </ul>
-          </article>
-          <article class="question-card">
-            <span class="card-number">Q2</span>
-            <h3>AIを使って生活はどう変わる？</h3>
-            <ul>
-              <li>仕事は増える・減る？</li>
-              <li>仕事の内容は変わる？</li>
-            </ul>
-          </article>
-          <article class="question-card compact-card">
-            <span class="card-number">Q3</span>
-            <h3>AIとどのような体験を積み重ねてきたか？</h3>
-          </article>
-          <article class="question-card compact-card">
-            <span class="card-number">Q4</span>
-            <h3>AIのことをどう思ってきたか？</h3>
-          </article>
-        </div>
-      </section>
-
-      <section id="why-now" class="content-section why-section" aria-labelledby="why-now-title">
-        <header class="section-heading">
-          <p class="section-code">03 / WHY NOW</p>
-          <h2 id="why-now-title">なぜ，今，調査するのか？</h2>
-        </header>
-        <p class="highlight-message">
-          <strong>インターネットが社会を変えたように，AIは人そのものを変えるかもしれない．</strong>
-          <span>その最初の変化を，最初から見届けられる機会は，今しかない．</span>
-        </p>
-        <ol class="reason-list">
-          <li>
-            <div>
-              <strong>人類は初めて，AIと日常的な関係を持ち始めた</strong>
-              <p>スマートフォンやSNSは情報を届ける技術でした．しかし，生成AIは，人と「会話し」，「相談相手」となり，「共同作業者」となる初めての技術です．これは，道具ではなく，新しい社会的存在との出会いです．この変化は，人間の心理や幸福，意思決定に長期的な影響を与える可能性があります．</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <strong>今しか観測できない「最初の世代」が存在する</strong>
-              <p>インターネットやスマートフォンも，人間を大きく変えました．しかし，多くの研究は，普及した後に始まりました．AIについては，まさに普及の始まりです．「AIと共に生き始めた最初の世代」を最初から追跡できる機会は，一度しかありません．</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <strong>短期研究では分からない問題だから</strong>
-              <p>AIは便利です．しかし，本当に知りたいのは，</p>
-              <ul class="topic-tags">
-                <li>幸福はどう変わるのか</li>
-                <li>孤独は減るのか</li>
-                <li>人間関係は変化するのか</li>
-                <li>判断力や創造性は変わるのか</li>
-                <li>AIへの愛着は形成されるのか</li>
-              </ul>
-              <p>といった数年単位でしか現れない変化です．現在の研究の多くは横断研究や短期間の調査であり，長期的影響はほとんど分かっていません．</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section id="scale" class="content-section" aria-labelledby="scale-title">
-        <header class="section-heading">
-          <p class="section-code">04 / METHOD</p>
-          <h2 id="scale-title">調査方法</h2>
-        </header>
-        <div class="section-body">
-          <p class="subheading">調査規模・期間</p>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <p class="stat-label">調査頻度</p>
-              <p class="stat-value"><strong>3</strong><span>か月ごと</span></p>
-              <p class="stat-note">年4回</p>
-            </article>
-            <article class="stat-card">
-              <p class="stat-label">参加期間</p>
-              <p class="stat-value"><strong>4</strong><span>年間〜</span></p>
-              <p class="stat-note">継続予定</p>
-            </article>
-            <article class="stat-card">
-              <p class="stat-label">参加人数</p>
-              <p class="stat-value"><strong>1,000</strong><span>名</span></p>
-              <p class="stat-note">プレ調査は200名</p>
-            </article>
+          <div class="hero-diagram" aria-hidden="true">
+            <span class="diagram-label label-human">Human</span>
+            <span class="diagram-label label-ai">AI</span>
+            <span class="diagram-label label-wellbeing">Well-being</span>
+            <div class="diagram-ring ring-one"></div>
+            <div class="diagram-ring ring-two"></div>
+            <div class="diagram-core">AIDA</div>
           </div>
         </div>
       </section>
 
-      <section id="items" class="content-section" aria-labelledby="items-title">
-        <header class="section-heading">
-          <p class="section-code">05 / SURVEY</p>
-          <h2 id="items-title">調査項目<span>（抜粋）</span></h2>
-        </header>
-        <div class="survey-grid">
-          <article class="survey-group">
-            <p class="survey-tag">BASELINE</p>
-            <h3>初回のみ</h3>
-            <ul>
-              <li>基本属性（年齢・性別・居住地域・職業・学歴・収入・同居者）</li>
-              <li>健康状態（持病・要配慮者との同居）</li>
-              <li>AI利用歴（利用経験・利用期間）</li>
-              <li>社会背景（友人数など）</li>
-            </ul>
-          </article>
-          <article class="survey-group">
-            <p class="survey-tag">RECURRING</p>
-            <h3>定期調査（毎回）</h3>
-            <ul>
-              <li>AI利用（頻度・用途・信頼・相談・医療利用）</li>
-              <li>AIへの考え方・態度</li>
-              <li>ウェルビーイング（幸福感・健康感・人生満足度・孤独感）</li>
-              <li>日常生活（趣味・運動・会話・達成感など）</li>
-              <li>人とのつながり（対面・オンラインの交流）</li>
-            </ul>
-          </article>
-          <article class="survey-group">
-            <p class="survey-tag">OPEN RESPONSE</p>
-            <h3>自由記述</h3>
-            <ul>
-              <li>最近印象に残った出来事</li>
-              <li>AIとの印象的な体験</li>
-              <li>AIが気持ちや意思決定に影響した経験</li>
-            </ul>
-          </article>
+      <section id="introduction" class="intro-section" aria-labelledby="intro-title">
+        <div class="container intro-grid">
+          <header class="section-heading">
+            <p class="section-index">00</p>
+            <p class="section-label" lang="en">Introduction</p>
+          </header>
+          <div class="intro-content">
+            <header class="intro-lead">
+              <h2 id="intro-title"><span class="intro-heading-line">AIと話すことが</span><span class="intro-heading-line">日常になりつつある、</span><strong class="intro-key-now intro-heading-now">いま。</strong></h2>
+              <p class="intro-scene"><span>──AIに質問をしたり、相談をしたり、励まされたり。</span><span>ときには、画面の向こうの友人のように感じることもあるかもしれません。</span></p>
+            </header>
+
+            <div class="intro-story">
+              <div class="intro-question">
+                <p class="intro-turn">けれど、私たちはまだ知りません。</p>
+                <p class="intro-question-copy"><strong class="intro-key-now">いま</strong>のこうした関係が、<span class="intro-time-destination"><span class="intro-time-bridge" aria-hidden="true"></span><strong class="intro-key-future">これから</strong></span>のヒトの幸せや孤独、生き方に、どのような影響を与えるのかを。</p>
+              </div>
+
+              <div class="intro-aida-block">
+                <p class="intro-aida-lead">そこで始まるのが、ヒトとAIの<strong class="intro-aida-term">「あいだ─AIDA」</strong>を見つめる<span class="intro-keep-phrase">長期追跡研究</span>です。</p>
+                <p>共通した特徴を持つ方々に協力していただき、長い時間をかけて、AIとの関わり方や、こころ・暮らしの変化を観察します。</p>
+              </div>
+
+              <div class="intro-possibilities">
+                <p>AIと親しくなるヒトもいるでしょう。</p>
+                <p>便利な道具として使い続けるヒトもいるでしょう。</p>
+              </div>
+
+              <p class="intro-investigation">その違いが、ヒトの幸福感や人生の満足感とどのようにつながるのかを調べます。</p>
+
+              <div class="intro-horizon">
+                <p><strong class="intro-key-now">いま</strong>はまだ小さな変化に見えるかもしれません。</p>
+                <p>けれどこの先振り返ったとき、この<strong class="intro-key-now">いま</strong>が、<strong class="intro-core-message">ヒトとAIが初めて本格的に<span class="intro-keep-phrase">出会った</span>時代だったと言われる<span class="intro-keep-phrase">でしょう</span></strong>。</p>
+              </div>
+
+              <p class="intro-mission"><strong>そのはじまりの瞬間を記録すること。</strong><span>それがこの研究の役目です。</span></p>
+
+              <p class="intro-closing"><strong class="intro-closing-name">AIDAコホート、</strong><span>ヒトとAI、<strong class="intro-key-now">いま</strong>と<strong class="intro-key-future">これから</strong>、「あいだ」をつなぐプロジェクトです。</span></p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="committee" class="content-section" aria-labelledby="committee-title">
-        <header class="section-heading">
-          <p class="section-code">06 / TEAM</p>
-          <h2 id="committee-title">運営について</h2>
-        </header>
-        <div class="section-body committee-card">
-          <div class="committee-intro">
-            <p class="committee-label">AIDA運営委員会</p>
-            <p>本研究は，ウェルビーイング研究者，自然言語処理研究者，精神医学研究者など多くの研究者の協力で進められています．</p>
+      <section id="about" class="section-shell" aria-labelledby="about-title">
+        <div class="container section-grid">
+          <header class="section-heading">
+            <p class="section-index" lang="en">01 / ABOUT</p>
+          </header>
+          <div class="section-content">
+            <h2 id="about-title">AIDAコホートとは</h2>
+            <p class="lead-copy">AIDAコホートとは，人間とAIの間の「関係性」を長期にわたり追跡する大規模コホート研究(*1)です．</p>
+            <p class="aida-expansion"><strong>AIDA</strong> は <span lang="en">AI-Integrated Dynamic Adaptation</span> の略称です．</p>
+            <div class="about-columns">
+              <div class="prose">
+                <p>ChatGPTなどのAIと人間との長期間にわたる「関係性」を観察するために，<strong class="key-number">1,000人</strong>の参加者を対象とした長期追跡観察研究（コホート）を立ち上げます．</p>
+                <p>このコホートでは，具体的には，AIの利用パターン（例：利用者がAIと親密な関係を築くかどうか）と，幸福感（主観的ウェルビーイング，協調的幸福感，人生満足度など）との関係を調査します．</p>
+              </div>
+              <aside class="definition-panel" aria-label="コホートの注釈">
+                <p class="footnote"><span>*1</span> コホートとは，共通の特性を持つ集団を一定期間追跡し，変化や様々な要因との関係性を観察する研究枠組みです．</p>
+              </aside>
+            </div>
           </div>
-          <ul class="institution-list" aria-label="参加機関">
-            <li class="institution">奈良先端科学技術大学院大学<br />先端科学技術研究科<br />ソーシャル・コンピューティング研究室</li>
-            <li class="institution">他</li>
-          </ul>
         </div>
       </section>
+
+      <section id="questions" class="section-shell section-tint" aria-labelledby="questions-title">
+        <div class="container section-grid">
+          <header class="section-heading">
+            <p class="section-index" lang="en">02 / QUESTIONS</p>
+          </header>
+          <div class="section-content">
+            <h2 id="questions-title">AIDAコホートが調べること</h2>
+
+            <ol class="question-list">
+              <li class="question-item">
+                <p class="question-number">Q1</p>
+                <div>
+                  <h3>AIを使って人間が幸福になるか？</h3>
+                  <ul>
+                    <li>どのように使うと幸福になる？</li>
+                    <li>何に使うと幸福になる？</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="question-item">
+                <p class="question-number">Q2</p>
+                <div>
+                  <h3>AIを使って生活はどう変わる？</h3>
+                  <ul>
+                    <li>仕事は増える・減る？</li>
+                    <li>仕事の内容は変わる？</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="question-item question-item-compact">
+                <p class="question-number">Q3</p>
+                <h3>AIとどのような体験を積み重ねてきたか？</h3>
+              </li>
+              <li class="question-item question-item-compact">
+                <p class="question-number">Q4</p>
+                <h3>AIのことをどう思ってきたか？</h3>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-now" class="section-shell" aria-labelledby="why-title">
+        <div class="container section-grid">
+          <header class="section-heading">
+            <p class="section-index" lang="en">03 / WHY NOW</p>
+          </header>
+          <div class="section-content">
+            <h2 id="why-title">なぜ，今，調査するのか？</h2>
+            <p class="highlight-message">
+              <strong>インターネットが社会を変えたように，AIは人そのものを変えるかもしれない．</strong>
+              <span>その最初の変化を，最初から見届けられる機会は，今しかない．</span>
+            </p>
+
+            <ol class="reason-list">
+              <li>
+                <p class="reason-number">01</p>
+                <div>
+                  <h3>人類は初めて，AIと日常的な関係を持ち始めた</h3>
+                  <p>スマートフォンやSNSは情報を届ける技術でした．しかし，生成AIは，人と「会話し」，「相談相手」となり，「共同作業者」となる初めての技術です．これは，道具ではなく，新しい社会的存在との出会いです．この変化は，人間の心理や幸福，意思決定に長期的な影響を与える可能性があります．</p>
+                </div>
+              </li>
+              <li>
+                <p class="reason-number">02</p>
+                <div>
+                  <h3>今しか観測できない「最初の世代」が存在する</h3>
+                  <p>インターネットやスマートフォンも，人間を大きく変えました．しかし，多くの研究は，普及した後に始まりました．AIについては，まさに普及の始まりです．「AIと共に生き始めた最初の世代」を最初から追跡できる機会は，一度しかありません．</p>
+                </div>
+              </li>
+              <li>
+                <p class="reason-number">03</p>
+                <div>
+                  <h3>短期研究では分からない問題だから</h3>
+                  <p>AIは便利です．しかし，本当に知りたいのは，</p>
+                  <ul class="topic-tags">
+                    <li>幸福はどう変わるのか</li>
+                    <li>孤独は減るのか</li>
+                    <li>人間関係は変化するのか</li>
+                    <li>判断力や創造性は変わるのか</li>
+                    <li>AIへの愛着は形成されるのか</li>
+                  </ul>
+                  <p>といった数年単位でしか現れない変化です．現在の研究の多くは横断研究や短期間の調査であり，長期的影響はほとんど分かっていません．</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="section-shell method-section" aria-labelledby="method-title">
+        <div class="container section-grid">
+          <header class="section-heading section-heading-light">
+            <p class="section-index" lang="en">04 / METHOD</p>
+          </header>
+          <div class="section-content">
+            <h2 id="method-title">調査方法</h2>
+            <p class="subheading">調査規模・期間</p>
+
+            <dl class="method-list">
+              <div>
+                <dt>調査頻度</dt>
+                <dd>
+                  <span class="method-value"><strong>3</strong><span>か月ごと</span></span>
+                  <span class="method-note">年4回</span>
+                </dd>
+              </div>
+              <div>
+                <dt>参加期間</dt>
+                <dd>
+                  <span class="method-value"><strong>4</strong><span>年間〜</span></span>
+                  <span class="method-note">継続予定</span>
+                </dd>
+              </div>
+              <div>
+                <dt>参加人数</dt>
+                <dd>
+                  <span class="method-value"><strong>1,000</strong><span>名</span></span>
+                  <span class="method-note">プレ調査は200名</span>
+                </dd>
+              </div>
+            </dl>
+
+            <!--
+              TODO: 正式情報の提供後、コホートプロフィールとして以下を追加する。
+              - 調査開始時期
+              - 研究対象者・対象年齢
+              - 募集方法
+              - AI利用者／非利用者の取扱い
+              未確認の値を公開表示しないこと。
+            -->
+          </div>
+        </div>
+      </section>
+
+      <section id="survey" class="section-shell" aria-labelledby="survey-title">
+        <div class="container section-grid">
+          <header class="section-heading">
+            <p class="section-index" lang="en">05 / SURVEY</p>
+          </header>
+          <div class="section-content">
+            <h2 id="survey-title">調査項目<span>（抜粋）</span></h2>
+
+            <div class="survey-list">
+              <article class="survey-group">
+                <p class="component-label" lang="en">BASELINE</p>
+                <h3>初回のみ</h3>
+                <ul>
+                  <li>基本属性（年齢・性別・居住地域・職業・学歴・収入・同居者）</li>
+                  <li>健康状態（持病・要配慮者との同居）</li>
+                  <li>AI利用歴（利用経験・利用期間）</li>
+                  <li>社会背景（友人数など）</li>
+                </ul>
+              </article>
+              <article class="survey-group">
+                <p class="component-label" lang="en">RECURRING</p>
+                <h3>定期調査（毎回）</h3>
+                <ul>
+                  <li>AI利用（頻度・用途・信頼・相談・医療利用）</li>
+                  <li>AIへの考え方・態度</li>
+                  <li>ウェルビーイング（幸福感・健康感・人生満足度・孤独感）</li>
+                  <li>日常生活（趣味・運動・会話・達成感など）</li>
+                  <li>人とのつながり（対面・オンラインの交流）</li>
+                </ul>
+              </article>
+              <article class="survey-group">
+                <p class="component-label" lang="en">OPEN RESPONSE</p>
+                <h3>自由記述</h3>
+                <ul>
+                  <li>最近印象に残った出来事</li>
+                  <li>AIとの印象的な体験</li>
+                  <li>AIが気持ちや意思決定に影響した経験</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section-shell team-section" aria-labelledby="team-title">
+        <div class="container section-grid">
+          <header class="section-heading">
+            <p class="section-index" lang="en">06 / TEAM</p>
+          </header>
+          <div class="section-content">
+            <h2 id="team-title">運営について</h2>
+
+            <div class="team-layout">
+              <section class="committee-panel" aria-labelledby="committee-title">
+                <h3 id="committee-title">AIDA運営委員会</h3>
+                <p>本研究は，ウェルビーイング研究者，自然言語処理研究者，精神医学研究者など多くの研究者の協力で進められています．</p>
+              </section>
+
+              <section class="institution-panel" aria-label="参加機関">
+                <ul class="institution-list">
+                  <li class="institution-card">
+                    <p class="institution-name">
+                      <strong>奈良先端科学技術大学院大学</strong>
+                      <span>先端科学技術研究科</span>
+                      <span>ソーシャル・コンピューティング研究室</span>
+                    </p>
+                  </li>
+                  <li class="institution-card institution-more">他</li>
+                  <!-- 今後の参加機関は、同じ institution-card を追加して掲載する。 -->
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        NEWS / UPDATES: 実在する公開情報が提供された場合のみ、次の位置に追加する。
+        <section id="news" class="section-shell updates-section" aria-labelledby="news-title">
+          <div class="container section-grid">
+            <header class="section-heading">...</header>
+            <div class="section-content">
+              <h2 id="news-title">AIDA Cohort Updates</h2>
+              <ol class="updates-list">公開日／見出し／リンク</ol>
+            </div>
+          </div>
+        </section>
+
+        PUBLICATIONS / OUTPUTS: 論文・学会発表・プレスリリース・メディア掲載・研究報告の
+        正式情報が提供された場合のみ、同じsection-grid構造で追加する。
+      -->
+
+      <!--
+        CONTACT: 正式な問い合わせ先が提供された場合のみ、Funding前またはFooter直前に追加する。
+        掲載項目：窓口名／所属／正式なメールアドレスまたは電話番号
+        架空の連絡先や画面上のTBDは表示しない。
+      -->
     </main>
 
-    <footer class="page-footer">
+    <footer class="site-footer">
       <div class="container footer-grid">
-        <div>
-          <p class="footer-brand">AIDA <span>COHORT</span></p>
+        <div class="footer-project">
+          <p class="footer-brand" lang="en">AIDA <span>COHORT</span></p>
           <p>人とAIの「あいだ」を見つめる長期追跡研究</p>
         </div>
-        <div class="acknowledgement">
-          <h2>謝辞</h2>
+        <section class="acknowledgement" aria-labelledby="acknowledgement-title">
+          <h2 id="acknowledgement-title">謝辞</h2>
           <p>本研究は国立大学法人運営費交付金「ミッション実現戦略分」における社会的インパクト創造事業によって実施されています．</p>
-        </div>
+        </section>
       </div>
     </footer>
   </body>
