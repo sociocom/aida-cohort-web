@@ -6,6 +6,7 @@
   --color-primary-dark: #26312f;
   --color-primary-soft: #dff8f2;
   --color-primary-pale: #f1fbf8;
+  --color-marker: rgba(28, 178, 153, 0.26);
   --color-ink: #26312f;
   --color-text: #3d4b49;
   --color-muted: #5d6b69;
@@ -222,18 +223,32 @@ dd {
   display: inline-flex;
   min-height: 46px;
   align-items: center;
-  border-bottom: 2px solid transparent;
+  padding-inline: 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
   color: #3f5e59;
   font-size: 0.9375rem;
   font-weight: 700;
   text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
   white-space: nowrap;
 }
 
 .nav-list a:hover,
 .nav-list a:focus-visible {
-  border-bottom-color: var(--color-primary);
+  border-color: var(--color-border);
+  background: var(--color-primary-pale);
   color: var(--color-primary-deep);
+}
+
+.nav-list a[aria-current="location"] {
+  border-color: #9edfd2;
+  background: var(--color-primary-soft);
+  color: var(--color-ink);
+  font-weight: 850;
 }
 
 /* Hero */
@@ -262,10 +277,10 @@ dd {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.03fr) minmax(440px, 0.97fr);
-  min-height: 680px;
+  min-height: 620px;
   align-items: center;
   gap: clamp(3rem, 7vw, 6.5rem);
-  padding-block: 5rem 7.5rem;
+  padding-block: 4rem 5.5rem;
 }
 
 .hero-copy {
@@ -288,10 +303,6 @@ dd {
   text-transform: uppercase;
 }
 
-.hero-concept span {
-  border-bottom: 3px solid var(--color-primary);
-}
-
 .hero-concept b {
   color: var(--color-primary-deep);
   font-weight: 500;
@@ -309,21 +320,8 @@ dd {
 }
 
 .hero-copy h1 em {
-  position: relative;
   color: var(--color-primary-deep);
   font-style: normal;
-}
-
-.hero-copy h1 em::after {
-  position: absolute;
-  right: 0;
-  bottom: -0.13em;
-  left: 0;
-  height: 0.12em;
-  border-radius: 999px;
-  background: var(--color-primary);
-  content: "";
-  opacity: 0.82;
 }
 
 .hero-name {
@@ -571,8 +569,6 @@ dd {
 .intro-key-human-ai,
 .intro-key-now,
 .intro-key-future {
-  position: relative;
-  z-index: 0;
   display: inline-block;
   color: var(--color-primary-deep);
   font-size: 1.12em;
@@ -581,22 +577,8 @@ dd {
   line-height: 1.25;
 }
 
-.intro-key-human-ai::after,
-.intro-key-now::after {
-  position: absolute;
-  z-index: -1;
-  right: -0.08em;
-  bottom: 0.02em;
-  left: -0.08em;
-  height: 0.32em;
-  background: rgba(28, 178, 153, 0.27);
-  content: "";
-}
-
 .intro-key-future {
   padding-inline: 0.12em;
-  border-bottom: 2px solid var(--color-primary);
-  background: linear-gradient(180deg, transparent 48%, var(--color-primary-soft) 48%);
 }
 
 .intro-heading-now {
@@ -605,15 +587,6 @@ dd {
   color: var(--color-primary-deep);
   font-size: 1.12em;
   letter-spacing: -0.025em;
-}
-
-.intro-heading-now::after {
-  right: -0.05em;
-  bottom: 0.08em;
-  left: -0.05em;
-  height: 0.2em;
-  background: var(--color-primary);
-  opacity: 0.58;
 }
 
 .intro-scene {
@@ -729,8 +702,6 @@ dd {
 .intro-aida-term {
   display: inline-block;
   padding-inline: 0.08em;
-  border-bottom: 3px solid var(--color-primary);
-  background: linear-gradient(180deg, transparent 55%, var(--color-primary-soft) 55%);
   color: var(--color-primary-deep);
   font-size: 1.12em;
   font-weight: 850;
@@ -798,10 +769,28 @@ dd {
 
 .intro-core-message {
   padding-inline: 0.08em;
-  background: linear-gradient(180deg, transparent 60%, rgba(28, 178, 153, 0.24) 60%);
   color: var(--color-ink);
   font-size: 1.08em;
   font-weight: 850;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Brand keywords share one restrained fluorescent-marker treatment. */
+.hero-concept span,
+.hero-copy h1 em,
+.intro-key-human-ai,
+.intro-key-now,
+.intro-key-future,
+.intro-aida-term,
+.intro-core-message {
+  background: linear-gradient(
+    180deg,
+    transparent 56%,
+    var(--color-marker) 56%,
+    var(--color-marker) 90%,
+    transparent 90%
+  );
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
@@ -1255,23 +1244,15 @@ dd {
   font-size: 0.9375rem;
 }
 
-.institution-placeholder {
+.institution-more {
+  display: grid;
+  min-height: 150px;
+  place-items: center;
   border-style: dashed;
-  background: #f9fcfb;
-  box-shadow: none;
-}
-
-.institution-placeholder-label {
-  width: fit-content;
-  margin: 0 0 0.75rem;
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  background: var(--color-primary-soft);
+  background: var(--color-page);
   color: var(--color-muted);
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 750;
-  letter-spacing: 0.035em;
 }
 
 /* Future content components: only rendered after verified data is added */
@@ -1391,7 +1372,8 @@ dd {
 @media (max-width: 920px) {
   .hero-layout {
     grid-template-columns: minmax(0, 1fr);
-    padding-block: 4.75rem 6.75rem;
+    gap: 2.75rem;
+    padding-block: 3.75rem 5rem;
   }
 
   .hero-copy {
@@ -1532,7 +1514,7 @@ dd {
 
   .hero-layout {
     min-height: auto;
-    padding-block: 4rem 6.25rem;
+    padding-block: 3rem 4.5rem;
   }
 
   .hero-concept {
