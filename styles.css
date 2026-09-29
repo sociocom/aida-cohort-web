@@ -1172,17 +1172,13 @@ dd {
   content: "";
 }
 
-/* Team and institutions */
+/* Secretariat */
 .team-section {
   background: #ffffff;
 }
 
-.team-layout {
-  display: grid;
-  gap: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.committee-panel {
+.secretariat-panel {
+  max-width: var(--measure);
   padding: clamp(1.8rem, 4vw, 2.7rem);
   border: 1px solid var(--color-border);
   border-left: 4px solid var(--color-primary);
@@ -1191,68 +1187,19 @@ dd {
     var(--color-primary-pale);
 }
 
-.committee-panel h3 {
+.secretariat-panel h3 {
   margin-bottom: 0.85rem;
   color: var(--color-ink);
   font-family: var(--font-serif);
   font-size: clamp(1.3rem, 2.2vw, 1.6rem);
 }
 
-.committee-panel p {
-  max-width: var(--measure);
+.secretariat-institution {
   margin-bottom: 0;
-  color: var(--color-text);
-  font-size: 1rem;
-}
-
-.institution-panel {
-  min-width: 0;
-}
-
-.institution-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.institution-card {
-  min-width: 0;
-  padding: clamp(1.5rem, 3vw, 2rem);
-  border: 1px solid var(--color-border);
-  background: #ffffff;
-  box-shadow: var(--shadow-sm);
-}
-
-.institution-name {
-  display: grid;
-  margin-bottom: 0;
-  padding-top: 1.15rem;
-  border-top: 3px solid var(--color-primary);
-}
-
-.institution-name strong {
-  margin-bottom: 0.45rem;
   color: var(--color-ink);
-  font-size: 1.125rem;
-}
-
-.institution-name span {
-  color: var(--color-muted);
-  font-size: 0.9375rem;
-}
-
-.institution-more {
-  display: grid;
-  min-height: 150px;
-  place-items: center;
-  border-style: dashed;
-  background: var(--color-page);
-  color: var(--color-muted);
-  font-size: 1rem;
+  font-size: clamp(1.125rem, 2vw, 1.3rem);
   font-weight: 750;
+  line-height: 1.65;
 }
 
 /* Future content components: only rendered after verified data is added */
@@ -1560,7 +1507,6 @@ dd {
 
   .about-columns,
   .question-list,
-  .team-layout,
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -1706,10 +1652,6 @@ dd {
     display: block;
   }
 
-  .team-layout {
-    gap: 1rem;
-  }
-
   .footer-grid {
     gap: 2.5rem;
   }
@@ -1757,7 +1699,7 @@ dd {
   .diagram-ring,
   .diagram-core,
   .diagram-label,
-  .institution-card {
+  .secretariat-panel {
     border: 1px solid CanvasText;
   }
 }
