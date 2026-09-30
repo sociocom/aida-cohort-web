@@ -216,6 +216,7 @@ dd {
 
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: clamp(1rem, 2vw, 1.75rem);
   margin: 0;
@@ -259,37 +260,28 @@ dd {
 .home-hero {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 6% 22%, rgba(28, 178, 153, 0.14), transparent 28rem),
-    linear-gradient(180deg, #ffffff 0%, #f7fcfa 100%);
+  padding-bottom: 2.5rem;
+  background: #f9fcfb;
 }
 
-.home-hero::before {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(7, 62, 56, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(7, 62, 56, 0.025) 1px, transparent 1px);
-  background-size: 72px 72px;
-  content: "";
-  mask-image: linear-gradient(to bottom, black, transparent 88%);
-  pointer-events: none;
+.hero-stage {
+  position: relative;
+  isolation: isolate;
 }
 
 .hero-layout {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.03fr) minmax(440px, 0.97fr);
-  min-height: 620px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: clamp(540px, 42vw, 640px);
   align-items: center;
-  gap: clamp(3rem, 7vw, 6.5rem);
-  padding-block: 4rem 5.5rem;
+  padding-block: 4.5rem;
 }
 
 .hero-copy {
   min-width: 0;
-  max-width: 650px;
+  max-width: 600px;
 }
 
 .hero-concept {
@@ -342,11 +334,39 @@ dd {
 }
 
 .hero-description {
-  max-width: 39rem;
-  margin-bottom: 1.7rem;
-  color: var(--color-muted);
+  max-width: 29rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
   font-size: 1.0625rem;
   line-height: 1.9;
+}
+
+.hero-overview {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(140px, 0.65fr) minmax(0, 3fr);
+  align-items: center;
+  gap: 2rem;
+  padding-block: 1.5rem;
+  border-block: 1px solid var(--color-border);
+  background: rgba(249, 252, 251, 0.94);
+}
+
+.hero-overview-label {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.hero-overview-label span {
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
 }
 
 .hero-facts {
@@ -354,13 +374,12 @@ dd {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 5.5rem), 1fr));
   row-gap: 1rem;
   margin: 0;
-  padding-block: 1.25rem;
-  border-block: 1px solid var(--color-border);
+  padding: 0;
 }
 
 .hero-facts > div {
   min-width: 0;
-  padding-inline: 1rem;
+  padding-inline: clamp(1rem, 3vw, 2.5rem);
 }
 
 .hero-facts > div:first-child {
@@ -382,15 +401,17 @@ dd {
 }
 
 .hero-facts dd {
-  display: grid;
-  gap: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
   margin: 0;
   color: var(--color-ink);
   line-height: 1.5;
 }
 
 .hero-facts strong {
-  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
   line-height: 1.25;
 }
 
@@ -402,8 +423,9 @@ dd {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  margin-top: 1rem;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 0;
 }
 
 .hero-actions a {
@@ -421,97 +443,47 @@ dd {
   text-decoration-thickness: 2px;
 }
 
-/* Human × AI × Well-being concept diagram */
-.hero-diagram {
-  position: relative;
-  width: min(100%, 480px);
-  aspect-ratio: 1;
-  justify-self: end;
-  isolation: isolate;
-}
-
-.hero-diagram::before {
-  position: absolute;
-  z-index: -1;
-  inset: 1%;
-  border: 1px solid rgba(28, 178, 153, 0.24);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(28, 178, 153, 0.08) 0 20%, transparent 44%);
-  content: "";
-}
-
-.diagram-ring,
-.diagram-core,
-.diagram-label {
-  position: absolute;
-}
-
-.diagram-ring {
-  inset: 14%;
-  border: 1px solid rgba(28, 178, 153, 0.42);
-  border-radius: 50%;
-}
-
-.ring-one {
-  transform: rotate(24deg) scaleY(0.5);
-}
-
-.ring-two {
-  transform: rotate(-43deg) scaleY(0.56);
-}
-
-.diagram-core {
-  inset: 33%;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(28, 178, 153, 0.58);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 20px 60px rgba(28, 178, 153, 0.14);
-  color: var(--color-primary-deep);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-}
-
-.diagram-label {
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 0.85rem;
-  border: 1px solid #bce7de;
+.hero-actions a:first-child {
+  min-height: 48px;
+  padding: 0.65rem 1.2rem;
+  border: 1px solid var(--color-ink);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 10px 28px rgba(31, 47, 45, 0.07);
-  color: var(--color-text);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  letter-spacing: 0.045em;
+  background: var(--color-ink);
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.diagram-label::before {
-  width: 0.42rem;
-  height: 0.42rem;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  background: var(--color-primary);
+.hero-actions a:first-child:hover {
+  background: #3f5e59;
+}
+
+/* A borderless image blends into the page, leaving a quiet area for the copy. */
+.hero-visual {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: min(88%, 1280px);
+  min-width: 0;
+  pointer-events: none;
+}
+
+.hero-visual::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #f9fcfb 0%, rgba(249, 252, 251, 0.98) 20%, rgba(249, 252, 251, 0.94) 36%, rgba(249, 252, 251, 0) 42%),
+    linear-gradient(0deg, #f9fcfb 0%, rgba(249, 252, 251, 0) 27%);
   content: "";
 }
 
-.label-human {
-  top: 8%;
-  left: 8%;
-}
-
-.label-ai {
-  top: 20%;
-  right: 0;
-}
-
-.label-wellbeing {
-  bottom: 8%;
-  left: 9%;
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1686 / 933;
+  /* Move the Human label past the fixed gradient while keeping AI on screen. */
+  transform: translateX(min(12vw, 180px));
 }
 
 /* Shared section system */
@@ -1602,11 +1574,6 @@ summary:hover {
     white-space: normal;
   }
 
-  .hero-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(390px, 0.88fr);
-    gap: 3rem;
-  }
-
   .section-grid,
   .intro-grid {
     grid-template-columns: 110px minmax(0, 1fr);
@@ -1617,19 +1584,44 @@ summary:hover {
 
 @media (max-width: 920px) {
   .hero-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(180px, 0.55fr);
+    grid-template-columns: minmax(0, 1fr);
     min-height: auto;
-    gap: 2rem;
-    padding-block: 3.5rem;
+    padding-block: 3.5rem 0;
   }
 
   .hero-copy {
     max-width: 700px;
+    justify-self: center;
   }
 
-  .hero-diagram {
-    width: min(100%, 430px);
-    justify-self: center;
+  .hero-description {
+    max-width: 36rem;
+  }
+
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    margin-top: -0.75rem;
+  }
+
+  .hero-visual::after {
+    background: linear-gradient(180deg, #f9fcfb 0%, rgba(249, 252, 251, 0) 14%, rgba(249, 252, 251, 0) 75%, #f9fcfb 100%);
+  }
+
+  .hero-image {
+    transform: none;
+  }
+
+  .hero-overview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .hero-overview-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
   }
 
   .section-grid,
@@ -1743,10 +1735,7 @@ summary:hover {
   }
 
   .hero-layout {
-    grid-template-columns: minmax(0, 1fr);
-    min-height: auto;
-    gap: 1.75rem;
-    padding-block: 2.5rem 2rem;
+    padding-block: 2.5rem 0.75rem;
   }
 
   .hero-concept {
@@ -1755,24 +1744,31 @@ summary:hover {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.45rem, 12vw, 3.25rem);
+    font-size: clamp(2rem, 9.2vw, 3.5rem);
   }
 
   .hero-description {
     font-size: 1rem;
   }
 
-  .hero-diagram {
-    width: min(65%, 240px);
-  }
-
   .hero-facts > div {
     padding-inline: 0.65rem;
   }
 
-  .diagram-label {
-    padding: 0.45rem 0.7rem;
-    font-size: 0.875rem;
+  .hero-facts dd {
+    display: grid;
+  }
+
+  .hero-facts strong {
+    font-size: clamp(1.25rem, 5.5vw, 1.8rem);
+  }
+
+  .hero-overview {
+    padding-block: 1.25rem;
+  }
+
+  .home-hero {
+    padding-bottom: 1.5rem;
   }
 
   .section-shell,
@@ -2000,17 +1996,6 @@ summary:hover {
     white-space: normal;
   }
 
-  .label-human {
-    left: 1%;
-  }
-
-  .label-ai {
-    right: 1%;
-  }
-
-  .label-wellbeing {
-    left: 2%;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2028,9 +2013,6 @@ summary:hover {
 
 @media (forced-colors: active) {
   .brand-mark,
-  .diagram-ring,
-  .diagram-core,
-  .diagram-label,
   .secretariat-panel {
     border: 1px solid CanvasText;
   }
