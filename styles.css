@@ -1583,35 +1583,6 @@ summary:hover {
 }
 
 @media (max-width: 920px) {
-  .hero-layout {
-    grid-template-columns: minmax(0, 1fr);
-    min-height: auto;
-    padding-block: 3.5rem 0;
-  }
-
-  .hero-copy {
-    max-width: 700px;
-    justify-self: center;
-  }
-
-  .hero-description {
-    max-width: 36rem;
-  }
-
-  .hero-visual {
-    position: relative;
-    width: 100%;
-    margin-top: -0.75rem;
-  }
-
-  .hero-visual::after {
-    background: linear-gradient(180deg, #f9fcfb 0%, rgba(249, 252, 251, 0) 14%, rgba(249, 252, 251, 0) 75%, #f9fcfb 100%);
-  }
-
-  .hero-image {
-    transform: none;
-  }
-
   .hero-overview {
     grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
@@ -1735,7 +1706,28 @@ summary:hover {
   }
 
   .hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
     padding-block: 2.5rem 0.75rem;
+  }
+
+  .hero-copy {
+    max-width: 700px;
+    justify-self: center;
+  }
+
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    margin-top: -0.75rem;
+  }
+
+  .hero-visual::after {
+    background: linear-gradient(180deg, #f9fcfb 0%, rgba(249, 252, 251, 0) 14%, rgba(249, 252, 251, 0) 75%, #f9fcfb 100%);
+  }
+
+  .hero-image {
+    transform: none;
   }
 
   .hero-concept {
@@ -1748,6 +1740,7 @@ summary:hover {
   }
 
   .hero-description {
+    max-width: 36rem;
     font-size: 1rem;
   }
 
