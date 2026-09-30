@@ -21,8 +21,15 @@
           </span>
         </a>
 
-        <nav class="primary-nav" aria-label="ページ内ナビゲーション">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="page-navigation">
+          <span class="nav-current">研究の概要</span>
+          <span class="nav-toggle-label">目次</span>
+          <span class="nav-chevron" aria-hidden="true"></span>
+        </button>
+
+        <nav class="primary-nav" id="page-navigation" aria-label="ページ内ナビゲーション">
           <ul class="nav-list">
+            <li><a href="#introduction">はじめに</a></li>
             <li><a href="#about">研究概要</a></li>
             <li><a href="#questions">調べること</a></li>
             <li><a href="#why-now">今，調査する理由</a></li>
@@ -41,9 +48,27 @@
             <p class="hero-concept" lang="en">
               <span>Human</span><b>×</b><span>AI</span><b>×</b><span>Well-being</span>
             </p>
-            <h1 id="hero-title">ヒトとAIの<br /><em>「あいだ」</em>を<wbr />見つめる</h1>
+            <h1 id="hero-title">ヒトとAIの<br /><em>「あいだ」</em>を<span class="hero-title-ending">見つめる</span></h1>
             <p class="hero-name">AIDA（あいだ）コホート</p>
             <p class="hero-description">AIとの関わり方と，幸福や健康，孤独，生き方の変化を長い時間をかけて観察する研究です．</p>
+            <dl class="hero-facts" aria-label="ひと目で分かる研究概要">
+              <div>
+                <dt>参加人数</dt>
+                <dd><strong>約1,000</strong><span>名予定</span></dd>
+              </div>
+              <div>
+                <dt>調査頻度</dt>
+                <dd><strong>3</strong><span>か月ごと</span></dd>
+              </div>
+              <div>
+                <dt>参加期間</dt>
+                <dd><strong>最低4</strong><span>年間・継続予定</span></dd>
+              </div>
+            </dl>
+            <div class="hero-actions">
+              <a href="#about">研究について<span aria-hidden="true">↓</span></a>
+              <a href="#method">調査方法を見る<span aria-hidden="true">↓</span></a>
+            </div>
           </div>
 
           <div class="hero-diagram" aria-hidden="true">
@@ -99,16 +124,17 @@
           </header>
           <div class="section-content">
             <h2 id="about-title">AIDAコホートとは</h2>
-            <p class="lead-copy">AIDAコホートとは，人間とAIの間の「関係性」を長期にわたり追跡する大規模コホート研究(*1)です．</p>
+            <p class="lead-copy">AIDAコホートとは，人間とAIの間の「関係性」を長期にわたり追跡する大規模コホート研究です．</p>
             <p class="aida-expansion"><strong>AIDA</strong> は <span lang="en">AI-Integrated Dynamic Adaptation</span> の略称です．</p>
             <div class="about-columns">
               <div class="prose">
-                <p>ChatGPTなどのAIと人間との長期間にわたる「関係性」を観察するために，<strong class="key-number">1,000人</strong>の参加者を対象とした長期追跡観察研究（コホート）を立ち上げます．</p>
+                <p>ChatGPTなどのAIと人間との長期間にわたる「関係性」を観察するために，<strong class="key-number">約1,000人</strong>の参加者を対象とした長期追跡観察研究（コホート）を立ち上げる予定です．</p>
                 <p>このコホートでは，具体的には，AIの利用パターン（例：利用者がAIと親密な関係を築くかどうか）と，幸福感（主観的ウェルビーイング，協調的幸福感，人生満足度など）との関係を調査します．</p>
               </div>
-              <aside class="definition-panel" aria-label="コホートの注釈">
-                <p class="footnote"><span>*1</span> コホートとは，共通の特性を持つ集団を一定期間追跡し，変化や様々な要因との関係性を観察する研究枠組みです．</p>
-              </aside>
+              <details class="definition-panel">
+                <summary>コホートとは？<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                <p class="footnote">コホートとは，共通の特性を持つ集団を一定期間追跡し，変化や様々な要因との関係性を観察する研究枠組みです．</p>
+              </details>
             </div>
           </div>
         </div>
@@ -172,30 +198,22 @@
               <li>
                 <p class="reason-number">01</p>
                 <div>
-                  <h3>人類は初めて，AIと日常的な関係を持ち始めた</h3>
-                  <p>スマートフォンやSNSは情報を届ける技術でした．しかし，生成AIは，人と「会話し」，「相談相手」となり，「共同作業者」となる初めての技術です．これは，道具ではなく，新しい社会的存在との出会いです．この変化は，人間の心理や幸福，意思決定に長期的な影響を与える可能性があります．</p>
+                  <h3>AIと日常的な関係を持ち始めた</h3>
+                  <p>生成AIは，会話や相談，共同作業の相手として日常に入り始めています．こうした関係が，人の心理や幸福，意思決定にどのような変化をもたらすのかを観察します．</p>
                 </div>
               </li>
               <li>
                 <p class="reason-number">02</p>
                 <div>
-                  <h3>今しか観測できない「最初の世代」が存在する</h3>
-                  <p>インターネットやスマートフォンも，人間を大きく変えました．しかし，多くの研究は，普及した後に始まりました．AIについては，まさに普及の始まりです．「AIと共に生き始めた最初の世代」を最初から追跡できる機会は，一度しかありません．</p>
+                  <h3>「最初の世代」を，最初から記録できる</h3>
+                  <p>AIと共に生き始めた人々を，普及の初期から追跡することに意味があります．後から振り返るだけでは捉えにくい，関係の始まりと変化を記録します．</p>
                 </div>
               </li>
               <li>
                 <p class="reason-number">03</p>
                 <div>
-                  <h3>短期研究では分からない問題だから</h3>
-                  <p>AIは便利です．しかし，本当に知りたいのは，</p>
-                  <ul class="topic-tags">
-                    <li>幸福はどう変わるのか</li>
-                    <li>孤独は減るのか</li>
-                    <li>人間関係は変化するのか</li>
-                    <li>判断力や創造性は変わるのか</li>
-                    <li>AIへの愛着は形成されるのか</li>
-                  </ul>
-                  <p>といった数年単位でしか現れない変化です．現在の研究の多くは横断研究や短期間の調査であり，長期的影響はほとんど分かっていません．</p>
+                  <h3>変化を知るには，長い時間が必要</h3>
+                  <p>幸福や孤独，人間関係，判断力・創造性，AIへの愛着はどう変わるのか．一時点や短期間の調査では捉えにくい変化を，同じ参加者を長く追い続けることで調べます．</p>
                 </div>
               </li>
             </ol>
@@ -223,18 +241,39 @@
               <div>
                 <dt>参加期間</dt>
                 <dd>
-                  <span class="method-value"><strong>4</strong><span>年間〜</span></span>
+                  <span class="method-value"><strong>4</strong><span>年間以上</span></span>
                   <span class="method-note">継続予定</span>
                 </dd>
               </div>
               <div>
                 <dt>参加人数</dt>
                 <dd>
-                  <span class="method-value"><strong>1,000</strong><span>名</span></span>
+                  <span class="method-value"><strong>約1,000</strong><span>名予定</span></span>
                   <span class="method-note">プレ調査は200名</span>
                 </dd>
               </div>
             </dl>
+
+            <div class="study-flow" aria-labelledby="study-flow-title">
+              <h3 id="study-flow-title">同じ参加者の変化を，長く見つめる</h3>
+              <ol class="study-timeline">
+                <li>
+                  <span class="flow-step" aria-hidden="true">01</span>
+                  <h4>初回調査</h4>
+                  <p>暮らしや健康，これまでのAI利用を記録</p>
+                </li>
+                <li>
+                  <span class="flow-step" aria-hidden="true">02</span>
+                  <h4>3か月ごとの調査</h4>
+                  <p>AIとの関わりや，こころ・暮らしの変化を記録</p>
+                </li>
+                <li>
+                  <span class="flow-step" aria-hidden="true">03</span>
+                  <h4>長期的な変化を観察</h4>
+                  <p>最低4年間の追跡を通じて，関係の変化を調べる</p>
+                </li>
+              </ol>
+            </div>
 
             <!--
               TODO: 正式情報の提供後、コホートプロフィールとして以下を追加する。
@@ -255,21 +294,28 @@
           </header>
           <div class="section-content">
             <h2 id="survey-title">調査項目<span>（抜粋）</span></h2>
+            <p class="section-description">暮らしやAIとの関わりを，3つの区分で記録します．各項目を開くと，詳しい内容をご覧いただけます．</p>
 
             <div class="survey-list">
-              <article class="survey-group">
-                <p class="component-label" lang="en">BASELINE</p>
-                <h3>初回のみ</h3>
+              <details class="survey-group">
+                <summary>
+                  <span class="survey-heading"><span class="component-label" lang="en">BASELINE</span><strong>初回のみ</strong></span>
+                  <span class="survey-description">基本属性・健康状態・AI利用歴など</span>
+                  <span class="disclosure-icon" aria-hidden="true"></span>
+                </summary>
                 <ul>
                   <li>基本属性（年齢・性別・居住地域・職業・学歴・収入・同居者）</li>
                   <li>健康状態（持病・要配慮者との同居）</li>
                   <li>AI利用歴（利用経験・利用期間）</li>
                   <li>社会背景（友人数など）</li>
                 </ul>
-              </article>
-              <article class="survey-group">
-                <p class="component-label" lang="en">RECURRING</p>
-                <h3>定期調査（毎回）</h3>
+              </details>
+              <details class="survey-group">
+                <summary>
+                  <span class="survey-heading"><span class="component-label" lang="en">RECURRING</span><strong>定期調査（毎回）</strong></span>
+                  <span class="survey-description">AI利用・幸福感・日常生活・人とのつながり</span>
+                  <span class="disclosure-icon" aria-hidden="true"></span>
+                </summary>
                 <ul>
                   <li>AI利用（頻度・用途・信頼・相談・医療利用）</li>
                   <li>AIへの考え方・態度</li>
@@ -277,16 +323,19 @@
                   <li>日常生活（趣味・運動・会話・達成感など）</li>
                   <li>人とのつながり（対面・オンラインの交流）</li>
                 </ul>
-              </article>
-              <article class="survey-group">
-                <p class="component-label" lang="en">OPEN RESPONSE</p>
-                <h3>自由記述</h3>
+              </details>
+              <details class="survey-group">
+                <summary>
+                  <span class="survey-heading"><span class="component-label" lang="en">OPEN RESPONSE</span><strong>自由記述</strong></span>
+                  <span class="survey-description">印象に残った出来事や，AIとの体験</span>
+                  <span class="disclosure-icon" aria-hidden="true"></span>
+                </summary>
                 <ul>
                   <li>最近印象に残った出来事</li>
                   <li>AIとの印象的な体験</li>
                   <li>AIが気持ちや意思決定に影響した経験</li>
                 </ul>
-              </article>
+              </details>
             </div>
           </div>
         </div>
